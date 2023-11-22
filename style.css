@@ -1,0 +1,219 @@
+
+body{
+    height: 100vh;
+    background-color: rgb(16, 52, 83);
+    margin: 0;
+    padding: 0;
+}
+/*Importing font retro gaming for tittle */
+@font-face{
+    font-family: PublicPixel;
+    src: url(fonts/PublicPixel-z84yD.ttf);
+}
+.backgroundBlueCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;height:15vh;
+   
+}
+
+header{
+    font-family: PublicPixel;
+    color: #FF9209;
+    font-size: 3rem;
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 30px;
+    overflow: hidden;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+}
+h1{
+    margin: 0;
+    font-size: 3rem;
+    text-wrap: nowrap;
+    padding: 0;
+    animation: glow 2.2s ease infinite;
+    -moz-animation: glow 2.2s ease infinite;
+    -webkit-animation: glow 4.2s ease infinite;
+  }
+  @keyframes glow {
+    0%{
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        color: #FED128;
+    }
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+      color: #FED128;
+    }
+    50% {
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        color: #cbac3c;
+    }
+  }
+  .gameContainerFlex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .gameContainer{
+    width: 100%;
+    
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .roulette{
+    background-color: black;
+    width: 450px;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+    height: 450px;
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  .startgame{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    bottom: 35%;    
+    z-index: 2;
+    text-wrap: nowrap;
+    font-size: 2rem;
+    text-shadow: none;
+    display: none;
+    animation: none;
+    padding: 1rem;
+    border-radius: 40px;
+    color: rgb(160, 11, 11);
+    background-color: rgb(255, 198, 55);
+    animation: opacityA 1s  infinite;
+
+  }
+  @keyframes opacityA {
+    0%{
+       opacity: 100%;
+
+    }
+    50% {
+        opacity: 55%;
+      }
+    100% {
+      opacity: 100%;
+    }
+   
+  }
+  .part{
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 7px rgba(0,0,0,0.94) inset;
+    -webkit-box-shadow: 0px 0px 40px 7px rgba(0,0,0,0.94) inset;
+    -moz-box-shadow: 0px 0px 40px 7px rgba(0,0,0,0.94) inset;
+  }
+  .blue{
+    background-color: blue;
+    width: 210px;
+    height: 210px;
+
+    border-radius: 0 500px 0 0;
+    right: 18px;
+  }
+  .red{
+    background-color: rgb(255, 0, 0);
+    width: 210px;
+    height: 210px;
+    bottom: 18px;
+    border-radius: 0 0 500px 0;
+    right: 18px;
+  }
+  .yellow{
+    background-color: yellow;
+    width: 210px;
+    height: 210px;
+    border-radius: 500px 0 0 0;
+  }
+  .green{
+    background-color: green;
+    width: 210px;
+    border-radius: 0 0 0 500px;
+    height: 210px;
+    bottom: 18px;
+  }
+  .rouletteCenter{
+    width: 205px;
+    height: 205px;
+    align-self: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    right: 142.5px;
+    box-shadow: 0px 0px 40px 7px rgba(0,0,0,0.94);
+-webkit-box-shadow: 0px 0px 40px 7px rgba(0,0,0,0.94);
+-moz-box-shadow: 0px 0px 40px 7px rgba(0,0,0,0.94);
+    background: rgb(69,69,69);
+    background: -moz-radial-gradient(circle, rgba(69,69,69,1) 0%, rgba(48,48,48,1) 33%, rgba(14,14,14,1) 68%, rgba(14,14,14,1) 77%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 99%);
+    background: -webkit-radial-gradient(circle, rgba(69,69,69,1) 0%, rgba(48,48,48,1) 33%, rgba(14,14,14,1) 68%, rgba(14,14,14,1) 77%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 99%);
+    background: radial-gradient(circle, rgba(69,69,69,1) 0%, rgba(48,48,48,1) 33%, rgba(14,14,14,1) 68%, rgba(14,14,14,1) 77%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#454545",endColorstr="#000000",GradientType=1);
+  }
+.displayNone{
+    display: none;
+}
+.toggleColor{
+    -webkit-box-shadow:0px 0px 400px 7px rgb(255, 255, 255);
+-moz-box-shadow: 0px 0px 300px 7px rgba(255, 255, 255, 0.258);
+box-shadow: 0px 0px 300px 7px rgba(255, 255, 255, 0.289);
+}
+.startRC{
+  background-color: rgba(232, 159, 2, 0.267);
+  width: 100px;
+  color: rgb(196, 139, 24);
+  font-family: PublicPixel;
+  font-size: .7rem;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  cursor: pointer;
+}
+.redScreen{
+  background-color: #FA1C16
+}
+@media (max-width: 470px) {
+  h1{
+    font-size: 1.5rem;
+  }
+  .roulette{
+    height: 320px;
+    width: 320px;
+  }
+  .part{
+    width: 150px;
+    height: 150px;
+  }
+  .startgame{
+  width: 100px;
+  height: 100px;
+  }
+  .rouletteCenter{
+    width: 140px;
+    height: 140px;
+    top: 0;
+    left: 30%;
+    top: 30%;
+  }
+}
